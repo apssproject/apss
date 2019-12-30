@@ -1,2 +1,2 @@
-# apss
-APSS main tree and docs
+# APSS-manager
+Desktop APSS software for board comunication and data manipulation.
