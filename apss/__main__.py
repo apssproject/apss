@@ -26,11 +26,43 @@ __email__ = "project.apss.system@gmail.com"
 __license__ = "GPLv3"
 __version__ = 'v1.0.beta-1'
 
+import os
 import sys
-import apss
+import argparse
 
-CURRENT_PYTHON = sys.version_info[:2]
-REQUIRED_PYTHON = (3, 6)
+from apss.interface import gui
+
+
+def main():
+    """ First entry of the program.
+        This function check sys.argv array and parse
+        the program in right execution.
+    """
+    # If current working directory is in subdir /apss/apss
+    # change it into his updir.
+    if '/apss/apss' in os.path.dirname(os.path.realpath(__file__)):
+        os.chdir(os.path.dirname(os.path.realpath(__file__))[:-5])
+
+    # Starting checking sys.argv
+    my_parser = argparse.ArgumentParser(description='List the content of a folder')
+
+    # Declaration of script's options
+    my_parser.add_argument('-r', '--readme', help='Print apss readme.', action="store_true")
+    my_parser.add_argument('-v', '--version', help='Get current apss version.', action="store_true")
+    my_parser.add_argument('-c', '--config', help='Open apss config file.', action="store_true")
+    args = my_parser.parse_args()
+
+    # Start parsing
+    if args.readme:
+        os.system("cat README")
+    elif args.version:
+        print(__version__)
+    elif args.config:
+        #os.system("")
+        pass
+    else:
+        gui.start()
+
 
 if __name__ == '__main__':
-    apss.main()
+    main()
