@@ -44,13 +44,22 @@ def main():
         os.chdir(os.path.dirname(os.path.realpath(__file__))[:-5])
 
     # Starting checking sys.argv
-    my_parser = argparse.ArgumentParser(description='List the content of a folder')
+    prs = argparse.ArgumentParser(description='Air Pollution Scanning System')
 
     # Declaration of script's options
-    my_parser.add_argument('-r', '--readme', help='Print apss readme.', action="store_true")
-    my_parser.add_argument('-v', '--version', help='Get current apss version.', action="store_true")
-    my_parser.add_argument('-c', '--config', help='Open apss config file.', action="store_true")
-    args = my_parser.parse_args()
+    prs.add_argument('-r', '--readme',
+                    help='Print apss readme.',
+                    action="store_true")
+
+    prs.add_argument('-v', '--version',
+                    help='Get current apss version.',
+                    action="store_true")
+
+    prs.add_argument('-c', '--config',
+                    help='Open apss config file.',
+                    action="store_true")
+
+    args = prs.parse_args()
 
     # Start parsing
     if args.readme:
