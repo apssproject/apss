@@ -1,43 +1,12 @@
-# **CORE**
-#### **MAIN CORE FUNCTION**
-- _runAllSensors()_
-- _runWithSensors(**args)_
-- _stopAllSensors()_
-- _stopSensors(**args)_
-- _sensorsList()_
+# **APSS board core documentation**
 
-#### **MAIN PROGRAM FUNCTION**
-- _commandListener()_
-- _hardware_
+#### ita
+La board APSS è una configurazione di un microcontrollore come l'Arduino Mega2560 configurato con una serie di sensori per la misurazione di valori ambientali quali C02, umidità, onde elettromagnetiche, ecc..
+La scheda può inoltre essere equipaggiata con un mini display a cristalli liquidi, un modulo SD per poter essere utilizzata in modalità standalone memorizzando i dati al suo interno, e moduli bluetooth/wifi per la comunicazione a distanza con un PC.
+Il framework APSS caricato sulla scheda si occupa di interfacciare tutti i sensori compatibili collegati tra di loro attraverso un interfaccia comune compatibile con tutte le configurazioni di sensori.
 
-### **COMMAND LINE COMMAND OPTIONS**
-- _--run-all-sensors_ **[--output] [--time]**
-  - Where
-   - **[--output]** is 'output.apss' in ~/.apss dir by default.
-   - **[--time]** is 60000 ms by default.
-
-- _--run-sensors_ **(sensors) [--output] [--time]**
-  - Where
-   - **(sensors)** must be specified.
-   - **[--output]** is 'output.apss' in ~/.apss dir by default.
-   - **[--time]** is 60000 ms by default.
-
-- _--load-firmware_ **(board) (port) [--version]**
-  - Positional arguments
-    - **(board)** Board is the model of the board where you want to load the apss framework (arduino2560, stm32nucleoHJF43, ecc).
-    - **(port)** Port is the link to the port where the board is actually connected (/dev/ACM0, /dev/ACM1, ecc).
-  - Optional arguments
-    - **[--output]** Version by default is _latest_ but you can specify one (--version=1.21.b1).
-
-**Example of activation by command line:**
-``` bash
-╭─user@user-linux /home/user ‹system›
-╰─$ apss --run-all-sensor
-[apss] Starting all sensors:
-[apss] Sensors founded:
-[apss]  - Humidity
-[apss]  - Co2
-[apss] Confirm? Y/n
-[apss] Starting measuring.. [#########......76%]
-
-```
+#### eng
+The APSS board is a configuration of a microcontroller such as the Arduino Mega2560 configured with a series of sensors for measuring environmental values such as C02, humidity, electromagnetic waves, etc..
+The board can also be equipped with a mini liquid crystal display, an SD module to be used in standalone mode storing data inside, and bluetooth/wifi modules for remote communication with a PC.
+The APSS framework loaded on the card takes care of interfacing all compatible sensors connected to each other through a common interface compatible with all sensor configurations.
+-
