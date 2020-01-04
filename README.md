@@ -1,9 +1,15 @@
-# **APSS**
+# **APSS**![image](https://avatars1.githubusercontent.com/u/57671915?s=200&v=4)
 ### **Air Pollution Scanning System**
-![language](https://img.shields.io/badge/lang-Python-blue)
-![language](https://img.shields.io/badge/lang-bash-green)
-![license](https://img.shields.io/badge/license-GPLv3-yellow)
-![version](https://img.shields.io/badge/version-v1.0.beta1-green)
+![language](https://img.shields.io/badge/lang-Python-blue?style=flat-square)
+![language](https://img.shields.io/badge/lang-bash-green?style=flat-square)
+![license](https://img.shields.io/badge/license-GPLv3-yellow?style=flat-square)
+![version](https://img.shields.io/badge/version-v1.0.beta1-green?style=flat-square)
+![repo size](https://img.shields.io/github/repo-size/apssproject/apss.svg?style=flat-square)
+
+![contributors](https://img.shields.io/github/contributors/apssproject/apss.svg?style=flat-square)
+![last commit](https://img.shields.io/github/last-commit/apssproject/apss.svg?style=flat-square)
+![commit activity](https://img.shields.io/github/commit-activity/y/apssproject/apss.svg?style=flat-square)
+
 ![twitter](https://img.shields.io/twitter/follow/apss?label=Follow&style=social)
 
 ## **Description**
